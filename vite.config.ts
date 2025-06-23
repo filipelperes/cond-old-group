@@ -5,7 +5,7 @@ import path from 'node:path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/cond-old-group",
+  base: "/cond-old-group/",
   plugins: [react(), tailwindcss()],
   server: {
     open: true,
