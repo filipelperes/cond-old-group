@@ -5,7 +5,7 @@ import { renderMediaContent } from "@/utils/renderMediaContent";
 import { useEffect } from "react";
 
 function App() {
-   const { messages, isLoading, error } = useChatMessages("/chat.txt");
+   const { messages, isLoading, error } = useChatMessages(`${import.meta.env.BASE_URL}chat.txt`);
 
    useEffect(() => {
       if (error) alert("Failed do fetch files. Please reload window.");
