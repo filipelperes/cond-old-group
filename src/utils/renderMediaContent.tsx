@@ -5,7 +5,7 @@ const fileRegex = /\s*\(file attached\)\s*/gi;
 export const renderMediaContent = (type: string, content: string) => {
    const cleaned = content.replace(fileRegex, '').trim();
    const ext = cleaned.split('.').pop()?.toLowerCase();
-   const mediaPath = `/media/${cleaned}`;
+   const mediaPath = `${import.meta.env.BASE_URL}media/${cleaned}`;
    const downloadLink = (
       <div className="!mt-2 text-xs">
          <a
